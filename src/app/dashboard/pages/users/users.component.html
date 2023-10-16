@@ -1,0 +1,11 @@
+<button (click)="openUserDialog()" mat-flat-button color="primary">
+    <mat-icon>add</mat-icon>
+    Crear Usuario
+</button>
+
+<!--{{testUser | fullname: 'uppercase'  }}-->
+
+<app-users-table [dataSource]="usuarios"
+(deleteUser)="onDeleteUser($event)"
+(editUser)="onEditUser($event)"
+></app-users-table>

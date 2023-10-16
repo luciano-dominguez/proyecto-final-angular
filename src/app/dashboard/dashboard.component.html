@@ -1,0 +1,25 @@
+<!--sidebar-->
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer style="width: 300px;" [opened]="showSidebar" #drawer class="example-sidenav" mode="side" position="end">
+    <app-sidebar></app-sidebar>
+    </mat-drawer>
+
+
+    <div class="example-sidenav-content">
+<!--toolbar-->
+        <app-toolbar (toggleSidebar)="showSidebar = ! showSidebar"></app-toolbar>
+
+
+        <main style="padding: 1rem;">
+
+            <h1 fontWeight="bolder" appHeadline>Alumnos</h1>
+
+            <!--pagina q se muestra
+            <app-forms></app-forms>-->
+            <app-users></app-users>
+            
+        </main>
+        
+    </div>
+
+</mat-drawer-container>
