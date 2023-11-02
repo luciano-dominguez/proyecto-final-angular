@@ -27,8 +27,8 @@ export class CoursesComponent {
         this.courses$ =  this.coursesService.createCourse$({
             id: new Date().getTime(),
             name: result.name,
-            endDate: new Date(),
-            startDate: new Date(),
+            endDate: result.endDate,
+            startDate: result.startDate,
           });
         }
       }

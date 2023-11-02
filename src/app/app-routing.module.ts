@@ -21,12 +21,13 @@ const routes: Routes = [
     },
     {
       path: 'users',
-      component: UsersComponent
+      component: UsersComponent,
     },
     
     {
       path: '**',
       redirectTo: 'home',
+      pathMatch: 'full',
     },
     ]
   },
