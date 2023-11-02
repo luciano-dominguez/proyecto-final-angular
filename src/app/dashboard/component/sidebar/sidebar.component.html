@@ -1,19 +1,19 @@
 <mat-nav-list>
 
-    <mat-list-item [activated]="true">
-        <a>Inicio</a>
+    <mat-list-item routerLink="home" [activated]="true" >
+        <a >Inicio</a>
     </mat-list-item>
 
-    <mat-list-item>
-        <a>Alumno</a>
+    <mat-list-item routerLink="users">
+        <a>Alumnos</a>
     </mat-list-item>
 
-    <mat-list-item>
-        <a>Materia</a>
+    <mat-list-item routerLink="courses">
+        <a>cursos</a>
     </mat-list-item>
 
-    <mat-list-item>
-        <a>Calificaciones</a>
+    <mat-list-item routerLink="enrollments">
+        <a>Inscripciones</a>
     </mat-list-item>
 
 </mat-nav-list>

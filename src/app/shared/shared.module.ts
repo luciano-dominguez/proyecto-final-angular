@@ -11,6 +11,7 @@ import { FullnamePipe } from './pipes/fullname.pipe';
 import {MatTableModule} from '@angular/material/table';
 import { FormErrorsPipe } from './pipes/form-errors.pipe';
 import { HeadlineDirective } from './directives/headline.directive';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HeadlineDirective } from './directives/headline.directive';
     FormErrorsPipe,
     MatTableModule,
     HeadlineDirective,
+    MatDatepickerModule
   ]
 })
 export class SharedModule { }

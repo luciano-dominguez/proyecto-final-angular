@@ -10,6 +10,8 @@ import { SharedModule } from '../shared/shared.module';
 import { MatListModule} from '@angular/material/list';
 import { ToolbarComponent } from './component/toolbar/toolbar.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component'
+import { RouterModule } from '@angular/router';
+import { CoursesModule } from './pages/courses/courses.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SidebarComponent } from './component/sidebar/sidebar.component'
     MatIconModule,
     UsersModule,
     MatListModule,
-    SharedModule
+    SharedModule,
+    RouterModule,
+    CoursesModule,
     ],
 
   exports: [DashboardComponent]

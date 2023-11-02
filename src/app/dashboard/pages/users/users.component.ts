@@ -9,9 +9,8 @@ import { User } from './models';
   
 })
 export class UsersComponent {
-  userName ='';
+  //userName ='';
     
-  
 
   usuarios: User[] = [
     {
@@ -21,6 +20,7 @@ export class UsersComponent {
     email: 'luciano@gmail.com'
   },
 ];
+
 
 constructor (
   private matDialog: MatDialog) {}
