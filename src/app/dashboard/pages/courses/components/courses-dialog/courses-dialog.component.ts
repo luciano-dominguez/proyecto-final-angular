@@ -10,9 +10,9 @@ import { coursesService } from '../../courses.service';
 })
 export class CoursesDialogComponent {
 
-  nameControl = new FormControl("",Validators.required,);
-  startDateControl = new FormControl();
-  endDateControl = new FormControl();
+  nameControl = new FormControl("",Validators.required);
+  startDateControl = new FormControl<string|Date>("",Validators.required);
+  endDateControl = new FormControl<string|Date>("",Validators.required);
 
 
   courseForm = new FormGroup({
