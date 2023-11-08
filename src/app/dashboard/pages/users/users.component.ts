@@ -12,14 +12,7 @@ export class UsersComponent {
   //userName ='';
     
 
-  usuarios: User[] = [
-    {
-    id: 1,
-    name: 'Luciano',
-    lastName: 'Dominguez',
-    email: 'luciano@gmail.com'
-  },
-];
+  usuarios: User[] = [];
 
 
 constructor (

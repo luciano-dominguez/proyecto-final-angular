@@ -16,16 +16,7 @@ export class UsersService {
 
   getUsers(): Observable<Users[]>{
     return new Observable((Subscriber) => {
-      Subscriber.next([
-        {
-          id: 1,
-          name: 'Luciano'
-        },
-        {
-          id: 2,
-          name: 'Oscar'
-        }
-      ])
+      Subscriber.next([])
     });
   }
 }

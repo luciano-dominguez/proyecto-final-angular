@@ -9,9 +9,9 @@ import { UsersModule } from './pages/users/users.module';
 import { SharedModule } from '../shared/shared.module';
 import { MatListModule} from '@angular/material/list';
 import { ToolbarComponent } from './component/toolbar/toolbar.component';
-import { SidebarComponent } from './component/sidebar/sidebar.component'
-import { RouterModule } from '@angular/router';
-import { CoursesModule } from './pages/courses/courses.module';
+import { SidebarComponent } from './component/sidebar/sidebar.component';
+import { DashboardRountingModule } from './dashboard-routing.module';
+import { UsersRoutingModule } from './pages/users/users-routing.module';
 
 @NgModule({
   declarations: [
@@ -25,11 +25,9 @@ import { CoursesModule } from './pages/courses/courses.module';
     FormsModule,
     MatToolbarModule,
     MatIconModule,
-    UsersModule,
     MatListModule,
     SharedModule,
-    RouterModule,
-    CoursesModule,
+    DashboardRountingModule,
     ],
 
   exports: [DashboardComponent]

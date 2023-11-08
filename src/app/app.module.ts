@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardModule } from './dashboard/dashboard.module';
+
 import { SharedModule } from './shared/shared.module';
 import { UsersModule } from './dashboard/pages/users/users.module';
 import { CoreModule } from './core/core.module';
@@ -22,7 +22,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DashboardModule,
+    
     SharedModule,
     UsersModule,
     CoreModule,
