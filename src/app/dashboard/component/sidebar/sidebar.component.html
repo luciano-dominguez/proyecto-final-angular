@@ -1,3 +1,11 @@
+<div style="background-color: green;">
+    <p style="color: greenyellow;">
+        {{fullName$ | async}}
+        <br>
+        {{email$ | async}}
+    </p>
+</div>
+
 <mat-nav-list>
 
     <mat-list-item routerLink="home" [activated]="true" >
@@ -17,7 +25,7 @@
     </mat-list-item>
 
     <mat-list-item (click)="logout()">
-        <a>cerrar sesion</a>
+        <a style="color: red;">cerrar sesion</a>
     </mat-list-item>
 
 </mat-nav-list>
