@@ -1,14 +1,117 @@
 {
-    "users": [
-        {
-            "name": "admin",
-            "lastName": "admin",
-            "email": "fake@mail.com",
-            "password": "123456",
-            "token": "ggg12345ld",
-            "role": "ADMIN",
-            "id": 1
-        }
-    ],
-    "courses": []
+  "users": [
+    {
+      "name": "Roberto",
+      "lastName": "Luquetin",
+      "email": "roberto@mail.com",
+      "password": "123456",
+      "token": "ggg12345ld",
+      "role": "ADMIN",
+      "id": 1
+    },
+    {
+      "name": "Ana",
+      "lastName": "Roldan",
+      "email": "roldan@mail.com",
+      "password": "654321",
+      "token": "12345ldhgfhghh",
+      "role": "EMPLOYEE",
+      "id": 2
+    },
+    {
+      "name": "Julio",
+      "lastName": "Perez",
+      "email": "julio@mail.com",
+      "password": "181818",
+      "token": "54154f5g4rrggrge",
+      "role": "STUDENT",
+      "id": 3
+    },
+    {
+      "name": "Sofia",
+      "lastName": "Persia",
+      "email": "sofi@mail.com",
+      "password": "2004",
+      "token": "1148jjhrds45",
+      "role": "STUDENT",
+      "id": 4
+    },
+    {
+      "name": "Lucas",
+      "lastName": "Rodriguez",
+      "email": "lucas@mail.com",
+      "password": "4002",
+      "token": "44557d4f4f1d52",
+      "role": "STUDENT",
+      "id": 5
+    },
+    {
+      "name": "Teo",
+      "lastName": "Gutierrez",
+      "email": "teo@mail.com",
+      "password": "2023",
+      "token": "ghdfghgffg8415",
+      "role": "STUDENT",
+      "id": 6
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "userId": 3
+    },
+    {
+      "id": 2,
+      "courseId": 2,
+      "userId": 3
+    },
+    {
+      "courseId": 1,
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "courseId": 1,
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "courseId": 1,
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "courseId": 1,
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "courseId": 2,
+      "userId": 4,
+      "id": 7
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "desarollo web"
+    },
+    {
+      "id": 2,
+      "name": "UX/UI"
+    },
+    {
+      "id": 3,
+      "name": "react"
+    },
+    {
+      "id": 4,
+      "name": "angular"
+    },
+    {
+      "id": 5,
+      "name": "javascrip"
+    }
+  ]
 }

@@ -1,7 +1,8 @@
 <h1>cursos</h1>
 
-<div class="d-flex justify-content-end mb-3">
-    <button (click)="addCourse()" mat-flat-button color="primary">agregar curso</button>
+<div class="d-flex justify-content-start mb-3">
+    <button (click)="addCourse()" mat-flat-button color="primary">
+        <mat-icon>add</mat-icon>agregar curso</button>
 </div>
 <app-courses-table
     [dataSource]= "(courses$ | async ) || []"

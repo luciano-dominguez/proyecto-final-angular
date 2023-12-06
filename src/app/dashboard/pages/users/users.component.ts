@@ -1,64 +1,56 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog'
+import { MatDialog } from '@angular/material/dialog';
 import { UsersDialogComponent } from './components/users-dialog/users-dialog.component';
 import { User } from './models';
+import { UsersService } from './users.service';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss'],
-  
 })
 export class UsersComponent {
-  //userName ='';
-    
+  userName = '';
 
-  usuarios: User[] = [];
+  users$: Observable<User[]>;
 
+  constructor(
+    private matDialog: MatDialog,
+    private usersService: UsersService) {
+    this.users$ = this.usersService.getUsers();}
 
-constructor (
-  private matDialog: MatDialog) {}
-
-  openUserDialog(): void{
-    this.matDialog.open(UsersDialogComponent).afterClosed().subscribe({next:(v) => {
-      console.log('VALOR: ',v);
-      if (!!v) {
-
-        this.usuarios = [
-          ...this.usuarios,
-          {
-            ...v,
-                id: new Date().getTime(),
+  addUser(): void {
+    this.matDialog
+      .open(UsersDialogComponent)
+      .afterClosed()
+      .subscribe({
+        next: (v) => {
+          if (!!v) {
+            this.users$ = this.usersService.createUser(v);
           }
-        ]
-      }
-    }});
-
+        },
+      });
   }
 
   onEditUser(user: User): void {
-    this.matDialog.open(UsersDialogComponent,{
-      data:user,
-    }).afterClosed().subscribe({
-      next: (v) => {
-        if (!!v){
-          const arrayNuevo = [...this.usuarios];
-
-          const indicetoEdit = arrayNuevo.findIndex((u) => u.id === user.id);
-
-          arrayNuevo[indicetoEdit] = {...arrayNuevo[indicetoEdit], ...v}
-
-          this.usuarios = [...arrayNuevo];
-
-
-        }
-      }
-    })
-    
-    ;
+    this.matDialog
+      .open(UsersDialogComponent, {
+        data: user,
+      })
+      .afterClosed()
+      .subscribe({
+        next: (v) => {
+          if (!!v) {
+            this.users$ = this.usersService.updateUser(user.id, v);
+          }
+        },
+      });
   }
 
-  onDeleteUser(Userid: number): void {
-    this.usuarios = this.usuarios.filter((u) => u.id !== Userid );
+  onDeleteUser(userId: number): void {
+    if (confirm('seguro quiere eliminar este usuario?')) {
+      this.users$ = this.usersService.deleteUser(userId);
+    }
   }
 }
-

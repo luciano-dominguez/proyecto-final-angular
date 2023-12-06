@@ -1,22 +1,35 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-
-export interface Users {
-  id: Number;
-  name: string;
-}
-
-
+import { User } from './models';
+import { HttpClient } from '@angular/common/http';
+import { Observable, concatMap, map } from 'rxjs';
+import { environment } from 'src/environments/environment.local';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsersService {
+  constructor(private httpClient: HttpClient) {}
 
-  constructor() { }
+  getUsers(): Observable<User[]> {
+    return this.httpClient.get<User[]>(`${environment.baseUrl}/users`);
+  }
 
-  getUsers(): Observable<Users[]>{
-    return new Observable((Subscriber) => {
-      Subscriber.next([])
-    });
+  createUser(payload: User): Observable<User[]> {
+    return this.httpClient
+      .post<User>(`${environment.baseUrl}/users`, payload)
+      .pipe(concatMap(() => this.getUsers()));
+  }
+
+  updateUser(userId: number, payload: User): Observable<User[]> {
+    return this.httpClient
+      .put<User>(`${environment.baseUrl}/users/${userId}`, payload)
+      .pipe(concatMap(() => this.getUsers()));
+  }
+
+  deleteUser(id: number): Observable<User[]> {
+    return this.httpClient
+      .delete<Object>(`${environment.baseUrl}/users/${id}`)
+      .pipe(
+        concatMap(() => this.getUsers())
+      );
   }
 }

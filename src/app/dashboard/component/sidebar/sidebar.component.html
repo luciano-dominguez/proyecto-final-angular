@@ -1,5 +1,5 @@
-<div style="background-color: green;">
-    <p style="color: greenyellow;">
+<div style="background-color: green; padding-top: 10px; padding-bottom: 3px;">
+    <p style="color: greenyellow; padding-left: 15px;">
         {{fullName$ | async}}
         <br>
         {{email$ | async}}
@@ -7,20 +7,21 @@
 </div>
 
 <mat-nav-list>
-
-    <mat-list-item routerLink="home" [activated]="true" >
-        <a >Inicio</a>
+    <mat-list-item routerLink="home" routerLinkActive #homeLink="routerLinkActive"
+    [activated]="homeLink.isActive">
+        <a>Home</a>
     </mat-list-item>
 
-    <mat-list-item routerLink="users">
-        <a>Alumnos</a>
+    <mat-list-item routerLink="users" routerLinkActive #usuariosLink="routerLinkActive"
+        [activated]="usuariosLink.isActive">
+        <a>Usuarios</a>
     </mat-list-item>
-
-    <mat-list-item routerLink="courses">
-        <a>cursos</a>
+    <mat-list-item routerLink="courses" routerLinkActive #cursosLink="routerLinkActive"
+        [activated]="cursosLink.isActive">
+        <a>Cursos</a>
     </mat-list-item>
-
-    <mat-list-item routerLink="enrollments">
+    <mat-list-item routerLink="enrollments" routerLinkActive #enrollmentsLink="routerLinkActive"
+        [activated]="enrollmentsLink.isActive">
         <a>Inscripciones</a>
     </mat-list-item>
 

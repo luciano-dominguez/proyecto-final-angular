@@ -29,11 +29,11 @@
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Eliminar / Editar</th>
         <td mat-cell *matCellDef="let usuarios">
-            <button (click)="deleteUser.emit(usuarios.id)" mat-icon-button color="warn">
+            <button [disabled]="(userRole$ | async) !== 'ADMIN'" (click)="deleteUser.emit(usuarios.id)" mat-icon-button color="warn">
                 <mat-icon>delete</mat-icon>
         </button> 
     
-        <button (click)="editUser.emit(usuarios)" mat-icon-button color="primary">
+        <button [disabled]="(userRole$ | async) !== 'ADMIN'" (click)="editUser.emit(usuarios)" mat-icon-button color="primary">
             <mat-icon>edit</mat-icon>
     </button>
     </td>
