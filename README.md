@@ -1,27 +1,32 @@
-# PfDominguezLuciano
+Bueno profe aca le dejo el usuario admin,empleado y alumno. para q usted pueda probar la app. 
+paso a detallarle un poco el funcionamiento: primero se va a tener que logear con alguno de estos 3 usuarios, luego dependiendo la jerarquia del usuario usted va a poder entrar a la pagina y dependiendo de esto tambien va a poder hacer alguna que otras tareas y/o ver otras pantallas.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
 
-## Development server
+USUARIO ADMIN: 
+        "name": "Roberto",
+      "lastName": "Luquetin",
+      "email": "roberto@mail.com",
+      "password": "123456",
+      "token": "ggg12345ld",
+      "role": "ADMIN",
+      "id": 1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+USUARIO "EMPLOYEE":
+        "name": "Ana",
+      "lastName": "Roldan",
+      "email": "roldan@mail.com",
+      "password": "654321",
+      "token": "12345ldhgfhghh",
+      "role": "EMPLOYEE",
+      "id": 2
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ESTE ES UNO DE LOS USUARIOS "ALUMNOS":
+        "name": "Julio",
+      "lastName": "Perez",
+      "email": "julio@mail.com",
+      "password": "181818",
+      "token": "54154f5g4rrggrge",
+      "role": "STUDENT",
+      "id": 3

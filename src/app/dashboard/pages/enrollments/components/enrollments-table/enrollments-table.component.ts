@@ -10,7 +10,7 @@ import {selectEnrollments} from '../../store/enrollment.selectors';
   styleUrls: ['./enrollments-table.component.scss'],
 })
 export class EnrollmentsTableComponent {
-  displayedColumns = ['id','fecha', 'course', 'user', 'actions'];
+  displayedColumns = ['id', 'course', 'user'];
 
   enrollments$: Observable<Enrollment[]>;
 
